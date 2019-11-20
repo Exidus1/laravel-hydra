@@ -1,0 +1,14 @@
+{
+  "name": "exidus/laravel-hydra",
+  "description": "Provides a wide range of features and extensions to a laravel project.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Exidus",
+      "email": "admin@exidus.sk"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}
