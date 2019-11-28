@@ -19,9 +19,9 @@ trait HydraModel
         return [];
     }
 
-    public static function rulesOnly(array $fiter, array $data = null)
+    public static function rulesOnly(array $filter, array $data = null)
     {
-        return array_intersect_key(self::rules($data), array_flip($fiter));
+        return array_intersect_key(self::rules($data), array_flip($filter));
     }
 
     public static function rulesData(array $data = null, string $field = null)

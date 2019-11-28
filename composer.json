@@ -15,5 +15,12 @@
         "psr-4": {
             "Exidus\\Hydra\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Exidus\\Hydra\\Providers\\HydraServiceProvider"
+            ]
+        }
     }
 }
