@@ -65,7 +65,9 @@ trait EasilyFilterable
                         $query->having($column, !$not ? '=' : '!=', $value);
 
                     } elseif (!empty($filter['custom'])) {
-                        // TODO Custom function
+                        // Custom function
+
+                        $query->when(is_callable($filter['custom']), $filter['custom']);
 
                     } else {
                         $basic = true;
