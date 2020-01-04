@@ -37,7 +37,6 @@ class PassportMacrosServiceProvider extends ServiceProvider
                         if (!$extras) {
                             $extras = config('hydra.passport.extras.default');
                         }
-                        dump($extras);
 
                         $content = $this->getContent();
                         $content = json_decode($content);
