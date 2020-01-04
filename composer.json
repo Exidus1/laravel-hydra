@@ -19,7 +19,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Exidus\\Hydra\\Providers\\HydraServiceProvider"
+                "Exidus\\Hydra\\Providers\\HydraServiceProvider",
+                "Exidus\\Hydra\\Providers\\PassportMacrosServiceProvider"
             ]
         }
     }

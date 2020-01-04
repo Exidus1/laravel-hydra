@@ -13,7 +13,9 @@ class HydraServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__.'/../config.php', 'hydra'
+        );
     }
 
     /**
@@ -23,6 +25,8 @@ class HydraServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/../config.php' => config_path('hydra.php'),
+        ]);
     }
 }
