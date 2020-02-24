@@ -3,6 +3,7 @@
 namespace Exidus\Hydra\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
 
 class SetLanguage
@@ -43,6 +44,7 @@ class SetLanguage
         // If a locale has been set & exists
         if ($locale && file_exists(resource_path('lang/' . $locale))) {
             App::setLocale($locale);
+            Carbon::setLocale($locale);
         }
 
         return $next($request);
