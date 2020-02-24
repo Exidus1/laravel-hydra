@@ -14,8 +14,13 @@ return [
                 'id',
                 'email',
                 'name',
-            ]
-        ]
-    ]
+            ],
+        ],
+    ],
+
+    'language' => [
+        'header' => 'Hydra-Lang',
+        'param' => 'lang',
+    ],
 
 ];
