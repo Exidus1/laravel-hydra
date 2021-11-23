@@ -69,6 +69,11 @@ trait EasilyFilterable
 
                         $query->when(is_callable($filter['custom']), $filter['custom']);
 
+                    } elseif (($from = in_array('date_from', $filter)) || in_array('date_to', $filter)) {
+                        // Filter by date range
+
+                        $query->where($column, $from ? '>=' : '<=', $value);
+
                     } else {
                         $basic = true;
                     }
