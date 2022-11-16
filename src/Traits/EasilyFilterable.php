@@ -74,6 +74,11 @@ trait EasilyFilterable
 
                         $query->where($column, $from ? '>=' : '<=', $value);
 
+                    } elseif (($min = in_array('min', $filter)) || in_array('max', $filter)) {
+                        // Filter min / max
+
+                        $query->where($column, $min ? '>=' : '<=', $value);
+
                     } else {
                         $basic = true;
                     }
