@@ -4,6 +4,7 @@ namespace Exidus\Hydra\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 trait EasilyFilterable
 {
@@ -72,7 +73,7 @@ trait EasilyFilterable
                     } elseif (($from = in_array('date_from', $filter)) || in_array('date_to', $filter)) {
                         // Filter by date range
 
-                        $query->where($column, $from ? '>=' : '<=', $value);
+                        $query->where($column, $from ? '>=' : '<=', Carbon::make($value)->utc());
 
                     } elseif (($min = in_array('min', $filter)) || in_array('max', $filter)) {
                         // Filter min / max
